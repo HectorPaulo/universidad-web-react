@@ -11,7 +11,7 @@ const AlumnosTable = () => {
 
     useEffect(() => {
         const fetchAlumnos = async () => {
-            const response = await axios.get("http://localhost:5122/api/uvo/alumnos", {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/uvo/alumnos`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }

@@ -11,7 +11,7 @@ const AdministrativosTable = () => {
 
     useEffect(() => {
         const fetchAdministrativos = async () => {
-            const response = await axios.get("http://localhost:5122/api/uvo/administrativos", {
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/uvo/administrativos`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }
